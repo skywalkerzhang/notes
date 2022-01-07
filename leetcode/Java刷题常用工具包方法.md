@@ -104,3 +104,14 @@ for (Map.Entry<String, Object> entry : infoMap.entrySet()) {
 }
 ```
 
+#### 数组
+
+* ArrayList转为int[][]
+
+```java
+List<int[]> res = new ArrayList<>();
+// 省略一系列add操作
+return res.toArray(new int[0][]);
+```
+
+写0是因为：当T泛型的长度没有list的size大时，会以size长度返回T；否则，使用传入的T。所以使用时不管写0还是其它数字，都没关系，习惯写0

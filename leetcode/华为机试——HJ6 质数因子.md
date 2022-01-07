@@ -32,3 +32,27 @@
 
 这道题写是好写的，但是会超时，开始还把它和素数筛搞混了以至于简单题目复杂化了。
 
+这道题有个坑是不用判断除数是不是素数，因为如果你先除以了素数，后面的不是素数的数自然不会被整除，可以少写循环
+
+```java
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner s = new Scanner(System.in);
+        int x = s.nextInt();
+        while(x % 2 == 0){
+            x /= 2;
+            System.out.print(2 + " ");
+        }
+        long end = (long)Math.sqrt(x);
+        for(int i = 3; i <= end; i += 2){ // 确认是奇数了 右边界可以取到 x一直在变小 // 不用判除数， 从小到大开始除的
+            while(x % i == 0){
+                x /= i;
+                System.out.print(i + " ");
+            }
+        }
+        if(x != 1) System.out.print(x);
+    }
+}
+```
+
