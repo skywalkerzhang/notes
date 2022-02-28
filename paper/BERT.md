@@ -62,7 +62,7 @@ BERT large版本 L = 24, H = 1024, A = 16
 
 ![](D:\notes\paper\bert20190926180722.png)
 
-Token Embeddings是词元信息，segment 是代表这个词属于哪个句子，position是BERT自己学习来的位置向量
+Token Embeddings是词源信息，segment 是代表这个词属于哪个句子，position是BERT自己学习来的位置向量
 
 
 
@@ -76,7 +76,7 @@ Token Embeddings是词元信息，segment 是代表这个词属于哪个句子�
 
 MASK My dog is [MASK]
 
-随机词元 My dog is apple
+随机词源 My dog is apple
 
 保持 My dog is hairy
 
